@@ -43,13 +43,21 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
+:root {
+  --primary-color: #5b5e6b;
+  --second-color: #ff79c9;
+  --back-color: #e4e8ed;
+  --back-color2: #ddd;
+  --accent-color: #0078f2;
+}
+
 ::-moz-selection {
-  background-color: #3A4A51;
+  background-color: var(--accent-color);
   color: #fff;
 }
 
 ::selection {
-  background-color: #3A4A51;
+  background-color: var(--accent-color);
   color: #fff;
 }
 
@@ -92,7 +100,7 @@ body {
 h1, h2, h3,
 h4, h5, h6 {
   font-family: "Poppins", sans-serif;
-  color: #222222;
+  color: #fff;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -169,7 +177,7 @@ ul, ol {
 }
 
 .section-title h2 {
-  color: #222222;
+  color: #fff;
   font-weight: 700;
   position: relative;
   margin-bottom: 70px;
@@ -185,20 +193,13 @@ ul, ol {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  background: #3A4A51;
+  background: var(--accent-color);
 }
 
 .section-title h2:before {
   bottom: -31px;
   width: 100px;
   height: 2px;
-}
-
-.section-title h2:after {
-  bottom: -35px;
-  width: 10px;
-  height: 10px;
-  border-radius: 8px;
 }
 
 .section-title p {
@@ -227,12 +228,11 @@ ul, ol {
   margin: 0 5px;
 }
 .main-header .main-menu ul li > .nav-link {
-  color: #222222;
-  font-weight: 400;
+  color: var(--primary-color);
+  font-weight: 500;
   padding: 25px 16px;
-  font-weight: 400;
   display: block;
-  font-size: 16px;
+  font-size: 17px;
   text-transform: capitalize;
 }
 .main-header .main-menu ul li > .nav-link::before {
@@ -240,7 +240,7 @@ ul, ol {
   content: "";
   left: 0;
   bottom: 14px;
-  background: #3A4A51;
+  background: var(--accent-color);
   height: 1px;
   width: 0;
 }
@@ -312,7 +312,7 @@ ul, ol {
   font-weight: 700;
 }
 .hero-area .hero-caption div {
-  color: #3A4A51;
+  color: var(--accent-color);
   font-weight: 400;
   font-size: 30px;
   line-height: 42px;
@@ -495,9 +495,10 @@ h2.service-title {
   margin-bottom: 30px;
 }
 .page .resume-wrap {
+  border: 1px solid var(--background-sub);
   width: 100%;
   margin-bottom: 30px;
-  background-color: #f9f9ff;
+  background-color: var(--background-sub);
   padding: 40px 30px;
   border-radius: 10px;
 }
@@ -532,8 +533,8 @@ h2.service-title {
   margin-bottom: 10px;
 }
 .page .resume-wrap:hover {
-  background: #90acd1;
-  color: #ffffff;
+  border: 1px solid var(--primary);
+  color: var(--background-sub);
 }
 .page .resume-wrap:hover .icon {
   background: #fff;
@@ -605,7 +606,7 @@ h2.service-title {
 }
 .filters li::before {
   content: "";
-  background: #3A4A51;
+  background: var(--accent-color);
   opacity: 0.5;
   height: 15px;
   width: 15px;
@@ -640,7 +641,7 @@ h2.service-title {
 }
 .filters-content .grid .single-work:hover .overlay {
   top: 20px;
-  background: #3A4A51;
+  background: var(--accent-color);
   left: 20px;
 }
 .filters-content .grid .single-work .short-info {
@@ -673,7 +674,7 @@ h2.service-title {
   position: relative;
 }
 .pricing-item .title {
-  color: #3A4A51;
+  color: var(--accent-color);
   text-transform: uppercase;
   margin: 0 0 16px 0;
 }
@@ -769,7 +770,7 @@ h2.service-title {
 /*    Hire Me Area
 /* =================================== */
 .hire-me-area {
-  background: #3A4A51;
+  background: var(--accent-color);
 }
 .hire-me-area .section-title h2 {
   color: #fff;
@@ -818,7 +819,7 @@ h2.service-title {
   position: absolute;
   top: -10px;
   background-color: #fff;
-  color: #3A4A51;
+  color: var(--accent-color);
   padding: 0 35px;
   font-size: 22px;
   left: 15px;
@@ -887,7 +888,7 @@ h2.service-title {
   display: none;
 }
 .blog-text .blog-text-inner .blog-date a i {
-  color: #3A4A51;
+  color: var(--accent-color);
   padding-right: 8px;
 }
 .blog-text .blog-text-inner h4 {
@@ -899,7 +900,7 @@ h2.service-title {
 }
 .blog-right .media-body small {
   display: block;
-  color: #3A4A51;
+  color: var(--accent-color);
   padding: 4px 0px;
   font-size: 14px;
 }
@@ -923,7 +924,7 @@ h2.service-title {
   height: 50px;
   border-radius: 50%;
   line-height: 50px;
-  border: 2px solid #3A4A51;
+  border: 2px solid var(--accent-color);
 }
 .contact-area .media h4 {
   margin-bottom: 8px;
@@ -932,7 +933,7 @@ h2.service-title {
   font-size: 15px;
 }
 .contact-area .contact-form .btn {
-  background: #3A4A51;
+  background: var(--accent-color);
   margin-top: 15px;
 }
 .contact-area .contact-form .btn:hover::before {
@@ -962,13 +963,13 @@ h2.service-title {
   font-size: 36px;
 }
 .footer-area .footer-social a i:hover {
-  color: #3A4A51;
+  color: var(--accent-color);
 }
 .footer-area .footer-bottom p {
   margin-bottom: 0;
 }
 .footer-area .footer-bottom a {
-  color: #3A4A51;
+  color: var(--accent-color);
 }
 
 /* =================================== */
@@ -999,7 +1000,7 @@ h2.service-title {
   top: 0;
   width: 100%;
   height: 100%;
-  background: #3A4A51;
+  background: var(--accent-color);
   z-index: 1;
   border-radius: 5px;
   transition: transform 0.5s;
@@ -1188,7 +1189,7 @@ h2.service-title {
   box-shadow: none;
 }
 .form-control:focus {
-  border-color: #3A4A51;
+  border-color: var(--accent-color);
   outline: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -1251,7 +1252,7 @@ textarea.form-control {
 }
 
 .slicknav_menu .slicknav_icon-bar {
-  background-color: #3A4A51 !important;
+  background-color: var(--accent-color) !important;
 }
 
 .slicknav_nav {
@@ -1268,7 +1269,7 @@ textarea.form-control {
 
 .slicknav_menu .slicknav_nav a:hover {
   background: transparent;
-  color: #3A4A51;
+  color: var(--accent-color);
 }
 
 .slicknav_menu {
@@ -1310,7 +1311,7 @@ textarea.form-control {
   height: 6px;
   border-radius: 50%;
   opacity: 0.5;
-  background: #3A4A51;
+  background: var(--accent-color);
 }
 .slick-dots li button::before {
   content: "";
